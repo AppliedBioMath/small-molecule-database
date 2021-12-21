@@ -38,7 +38,7 @@ version.sdf is the .sdf file which contains the chemicals entity which can be pa
 The parsed chemical can be imported into the DBMS via the sqlchemy.  
 The script is listed as eMolecules_import.ipynb  
 3. Query the concatenated databases
-Inside the DBMS (DBeaver recommanded) join the information among the tables
+Here is a brief tutorial for query https://www.w3schools.com/sql/sql_join.asp. Inside the DBMS (DBeaver recommanded) join the information among the tables
 ```
 select * from <table a> a
 join <table b> b on a.<column> = b.<column>
