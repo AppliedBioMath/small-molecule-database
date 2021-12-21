@@ -6,11 +6,17 @@ ChEMBL29 download link https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/lates
 CHEBI (version Dec.2021) download link for https://ftp.ebi.ac.uk/pub/databases/chebi/generic_dumps/generic_dump_allstar.zip (unzip to tables.sql) and https://ftp.ebi.ac.uk/pub/databases/chebi/generic_dumps/pgsql_create_tables.sql (unzip to pgsql_create_tables.sql)  
 eMolecules (version Dec.2021) https://downloads.emolecules.com/free/2021-12-01/version.sdf.gz (unzip to version.sdf)  
 2. Import database into postgresql  
-a.Create the database: Log into PostgreSQL database server where you intend to load chembl data and run the following command to create new database:
+For those who first use the postgresql, check this blog https://phoenixnap.com/kb/install-postgresql-windows.  
+a.Create the database: 
+Log into PostgreSQL database server in command line where you intend to load chembl data and run the following command to create new database:
 ```
-psql create database chemicals;
+psql -U <username> -p <password>
 ```
-Logout of database
+Create database inside
+```
+postgres=# create database chemicals;
+```
+Logout of database with \q  
 
 b. ChEMBL29 
 use command line to load data and replace <username>, <password> with local settings,
