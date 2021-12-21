@@ -8,7 +8,7 @@ eMolecules (version Dec.2021) https://downloads.emolecules.com/free/2021-12-01/v
 2. Import database into postgresql  
 For those who first use the postgresql, check this blog https://phoenixnap.com/kb/install-postgresql-windows.  
 a.Create the database: 
-Log into PostgreSQL database server in command line where you intend to load chembl data and run the following command to create new database:
+Log into PostgreSQL database server in command line where you intend to load data:
 ```
 psql -U <username> -p <password>
 ```
