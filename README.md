@@ -3,8 +3,7 @@ This project aims to create locally accessible chemical DBMS.
 DBMS contains ChEMBL29, CHEBI and eMolecules  
 1.Data sources  
 ChEMBL29 download link https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/chembl_29_postgresql.tar.gz (unzip to chembl_29_postgresql.dmp)  
-CHEBI download link for https://ftp.ebi.ac.uk/pub/databases/chebi/generic_dumps/generic_dump_allstar.zip (unzip to tables.sql) and  
-https://ftp.ebi.ac.uk/pub/databases/chebi/generic_dumps/pgsql_create_tables.sql (unzip to pgsql_create_tables.sql)  
+CHEBI download link for https://ftp.ebi.ac.uk/pub/databases/chebi/generic_dumps/generic_dump_allstar.zip (unzip to tables.sql) and https://ftp.ebi.ac.uk/pub/databases/chebi/generic_dumps/pgsql_create_tables.sql (unzip to pgsql_create_tables.sql)  
 eMolecules https://downloads.emolecules.com/free/2021-12-01/version.sdf.gz (unzip to version.sdf)  
 2. Import database into postgresql  
 a.Create the database: Log into PostgreSQL database server where you intend to load chembl data and run the following command to create new database:
@@ -32,3 +31,11 @@ There is no .dmp or .sql file provided by eMolecules, so that it cannot be impor
 version.sdf is the .sdf file which contains the chemicals entity which can be parsed by RDKit (https://www.rdkit.org/docs/GettingStartedInPython.html)  
 The parsed chemical can be imported into the DBMS via the sqlchemy.  
 The script is listed as eMolecules_import.ipynb  
+
+3. Query the concatenated databases
+Inside the DBMS (DBeaver recommanded) join the information among the tables
+```
+select * from <table a> a
+join <table b> b on a.<column> = b.<column>
+where <filter condition>;
+```
