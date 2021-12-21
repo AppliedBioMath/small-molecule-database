@@ -8,7 +8,7 @@ eMolecules https://downloads.emolecules.com/free/2021-12-01/version.sdf.gz (unzi
 2. Import database into postgresql  
 a.Create the database: Log into PostgreSQL database server where you intend to load chembl data and run the following command to create new database:
 ```
-    psql create database chemicals;
+psql create database chemicals;
 ```
 Logout of database
 
@@ -31,7 +31,6 @@ There is no .dmp or .sql file provided by eMolecules, so that it cannot be impor
 version.sdf is the .sdf file which contains the chemicals entity which can be parsed by RDKit (https://www.rdkit.org/docs/GettingStartedInPython.html)  
 The parsed chemical can be imported into the DBMS via the sqlchemy.  
 The script is listed as eMolecules_import.ipynb  
-
 3. Query the concatenated databases
 Inside the DBMS (DBeaver recommanded) join the information among the tables
 ```
