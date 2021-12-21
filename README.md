@@ -15,18 +15,18 @@ Logout of database
 
 b. ChEMBL29 
 use command line to load data and replace <username>, <password> with local settings,
-'''
+```
 psql -u <username> -p <password> chemicals < chembl_29_postgresql.dmp
-'''
+```
 c. CHEBI
 use command line to load creating tables data first and replace <username>, <password> with local settings,
-'''
+```
 psql -u <username> -p <password> chemicals < pgsql_create_tables.sql
-'''
+```
 followed by import database
-'''
+```
 psql -u <username> -p <password> chemicals < tables.sql
-'''
+```
 d. eMolecules
 There is no .dmp or .sql file provided by eMolecules, so that it cannot be imported into DBMS directly. 
 version.sdf is the .sdf file which contains the chemicals entity which can be parsed by RDKit (https://www.rdkit.org/docs/GettingStartedInPython.html)
