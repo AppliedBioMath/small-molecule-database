@@ -21,16 +21,16 @@ Logout of database with \q
 b. ChEMBL29 
 use command line to load data and replace <username>, <password> with local settings,
 ```
-psql -u <username> -p <password> chemicals < chembl_29_postgresql.dmp
+psql -U <username> -p <password> chemicals < chembl_29_postgresql.dmp
 ```
 c. CHEBI
 use command line to load creating tables data first and replace <username>, <password> with local settings,
 ```
-psql -u <username> -p <password> chemicals < pgsql_create_tables.sql
+psql -U <username> -p <password> chemicals < pgsql_create_tables.sql
 ```
 followed by import database
 ```
-psql -u <username> -p <password> chemicals < tables.sql
+psql -U <username> -p <password> chemicals < tables.sql
 ```
 d. eMolecules
 There is no .dmp or .sql file provided by eMolecules, so that it cannot be imported into DBMS directly.   
