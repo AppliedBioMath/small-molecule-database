@@ -8,9 +8,9 @@ https://ftp.ebi.ac.uk/pub/databases/chebi/generic_dumps/pgsql_create_tables.sql 
 eMolecules https://downloads.emolecules.com/free/2021-12-01/version.sdf.gz (unzip to version.sdf)
 2. Import database into postgresql
 a.Create the database: Log into PostgreSQL database server where you intend to load chembl data and run the following command to create new database:
-'''
+```
     psql create database chemicals;
-'''
+```
 Logout of database
 
 b. ChEMBL29 
