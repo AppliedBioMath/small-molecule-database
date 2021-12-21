@@ -10,8 +10,9 @@ For those who first use the postgresql, check this blog https://phoenixnap.com/k
 a.Create the database: 
 Log into PostgreSQL database server in command line where you intend to load data:
 ```
-psql -U <username> -p <password>
+psql -U <username>
 ```
+type password 
 Create database inside
 ```
 postgres=# create database chemicals;
@@ -19,18 +20,18 @@ postgres=# create database chemicals;
 Logout of database with \q  
 
 b. ChEMBL29 
-use command line to load data and replace <username>, <password> with local settings,
+use command line to load data and replace <username> with local setting,
 ```
-psql -U <username> -p <password> chemicals < chembl_29_postgresql.dmp
+psql -U <username> chemicals < chembl_29_postgresql.dmp
 ```
 c. CHEBI
-use command line to load creating tables data first and replace <username>, <password> with local settings,
+use command line to load creating tables data first and replace <username> with local setting,
 ```
-psql -U <username> -p <password> chemicals < pgsql_create_tables.sql
+psql -U <username> chemicals < pgsql_create_tables.sql
 ```
 followed by import database
 ```
-psql -U <username> -p <password> chemicals < tables.sql
+psql -U <username> chemicals < tables.sql
 ```
 d. eMolecules
 There is no .dmp or .sql file provided by eMolecules, so that it cannot be imported into DBMS directly.   
