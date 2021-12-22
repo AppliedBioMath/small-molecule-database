@@ -12,7 +12,7 @@ Log into PostgreSQL database server in command line where you intend to load dat
 ```
 psql -U <username>
 ```
-type password 
+type password  
 Create database inside
 ```
 postgres=# create database chemicals;
