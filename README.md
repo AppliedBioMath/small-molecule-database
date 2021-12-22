@@ -60,5 +60,5 @@ ChEMBL
 ChEMBL expectedly updates the whole database around every 4 months. The updated package includes all the information in the former release. Drop the existed database and install the latest one for the update.  
 CHEBI    
 Check the website to get the new release notice. The updated package includes all the information in the former release. Drop the existed database and install the latest one for the update.  
-eMolecules
+eMolecules  
 eMolecules updates their database monthly. The new release will provide the .sdf file of the whole database and the incremental datasets, which contains the compounds changed since the last release. Run the eMolecule_import.ipybn to import this datasets to the existed database.
