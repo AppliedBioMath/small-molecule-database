@@ -45,7 +45,7 @@ select * from <table a> a
 join <table b> b on a.<column> = b.<column>
 where <filter condition>;
 ```
-Here is the example query, the query is 'Get the log partition coefficient of the aspirin from eMolecules and its bioactivity experimental data from the tables in ChEMBL.
+Here is the example query, the query is 'Get the log partition coefficient of the aspirin from eMolecules and its bioactivity experimental data from the tables in ChEMBL.' InChIKey(International chemical identifier key) is used as the key to concatenate two databases.
 ```
 select md.pref_name, ec."logP", td.pref_name as target, a.standard_relation, a.standard_value, a.standard_units, a.standard_type 
 from molecule_dictionary md
