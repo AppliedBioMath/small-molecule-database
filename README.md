@@ -55,7 +55,7 @@ join assays a2 on a.assay_id = a2.assay_id
 join target_dictionary td on td.tid = a2.tid and td.pref_name != 'Unchecked'
 join emolecule_compound ec on ec."InChikey" = cs.standard_inchi_key and ec."InChikey" = 'BSYNRYMUTXBXSQ-UHFFFAOYSA-N';
 ``` 
-4.Database update instruction
+4.Database update instruction  
 ChEMBL  
 ChEMBL expectedly updates the whole database around every 4 months. The updated package includes all the information in the former release. Drop the existed database and install the latest one for the update.  
 CHEBI    
