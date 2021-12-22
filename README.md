@@ -45,3 +45,15 @@ select * from <table a> a
 join <table b> b on a.<column> = b.<column>
 where <filter condition>;
 ```
+Here is the example query, the query is 'Get the SMILES string of the aspirin and its bioactivity experimental data from the ChEMBL'
+```
+  
+4.Database update instruction
+ChEMBL  
+ChEMBL expectedly updates the whole database around every 4 months. The updated package includes all the information in the former release. Drop the existed database and install the latest one for the update.  
+CHEBI    
+Check the website to get the new release notice. The updated package includes all the information in the former release. Drop the existed database and install the latest one for the update.  
+eMolecules
+eMolecules updates their database monthly. The new release will provide the .sdf file of the whole database and the incremental datasets, which contains the compounds changed since the last release. Run the eMolecule_import.ipybn to import this datasets to the existed database.
+  
+  
