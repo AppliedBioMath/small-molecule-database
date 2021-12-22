@@ -45,9 +45,16 @@ select * from <table a> a
 join <table b> b on a.<column> = b.<column>
 where <filter condition>;
 ```
-Here is the example query, the query is 'Get the SMILES string of the aspirin and its bioactivity experimental data from the ChEMBL'
+Here is the example query, the query is 'Get the log partition coefficient of the aspirin from eMolecules and its bioactivity experimental data from the tables in ChEMBL.
 ```
-  
+select md.pref_name, ec."logP", td.pref_name as target, a.standard_relation, a.standard_value, a.standard_units, a.standard_type 
+from molecule_dictionary md
+join activities a on md.molregno = a.molregno
+join compound_structures cs ON cs.molregno = a.molregno 
+join assays a2 on a.assay_id = a2.assay_id
+join target_dictionary td on td.tid = a2.tid and td.pref_name != 'Unchecked'
+join emolecule_compound ec on ec."InChikey" = cs.standard_inchi_key and ec."InChikey" = 'BSYNRYMUTXBXSQ-UHFFFAOYSA-N';
+``` 
 4.Database update instruction
 ChEMBL  
 ChEMBL expectedly updates the whole database around every 4 months. The updated package includes all the information in the former release. Drop the existed database and install the latest one for the update.  
@@ -55,5 +62,3 @@ CHEBI
 Check the website to get the new release notice. The updated package includes all the information in the former release. Drop the existed database and install the latest one for the update.  
 eMolecules
 eMolecules updates their database monthly. The new release will provide the .sdf file of the whole database and the incremental datasets, which contains the compounds changed since the last release. Run the eMolecule_import.ipybn to import this datasets to the existed database.
-  
-  
